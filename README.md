@@ -1,6 +1,7 @@
 # AutoChrome
  c h r o m e
 ---
+# chrome go ram yummy
 
 This is meant for educational purposes only, and does not cause any permenant damage to your computer.
 
