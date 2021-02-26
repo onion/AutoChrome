@@ -1,11 +1,14 @@
 import os
 import subprocess
 import ctypes
+import random
+
+possible_strings = ['You\'ve been chromed!', 'You\'ve been hacked by 我在个们!', 'onion owns you', 'es0t owns you']
+message_box = ctypes.windll.user32.MessageBoxW
 
 
 def main():
-    message_box = ctypes.windll.user32.MessageBoxW
-    message_box(None, 'You\'ve been chromed!', 'trollage', 0)
+    message_box(None, possible_strings[random.randint(0, len(possible_strings) - 1)], 'trollage', 0)
     os.system('start https://media.tenor.com/images/2972a25f708c6b9158c026ef1b6584ef/tenor.gif')
 
     def open1():
