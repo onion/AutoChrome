@@ -1,3 +1,12 @@
+"""
+Written by onion and 3s0
+https://github.com/onion
+https://github.com/3s0
+
+Moral support by
+https://github.com/MoralSupportMistro
+"""
+
 import os
 import subprocess
 import urllib.request
