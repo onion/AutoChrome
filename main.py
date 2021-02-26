@@ -1,6 +1,5 @@
 import os
 import subprocess
-import threading
 
 
 def main():
@@ -9,15 +8,11 @@ def main():
         while True:
             os.system('start chrome')
             subprocess.call('python main.py', creationflags=subprocess.CREATE_NEW_CONSOLE)
+            subprocess.call('python main.py', creationflags=subprocess.CREATE_NEW_CONSOLE)
+            subprocess.call('python main.py', creationflags=subprocess.CREATE_NEW_CONSOLE)
+            subprocess.call('python main.py', creationflags=subprocess.CREATE_NEW_CONSOLE)
 
-    t1 = threading.Thread(target=open1())
-    t2 = threading.Thread(target=open1())
-    t3 = threading.Thread(target=open1())
-    t4 = threading.Thread(target=open1())
-    t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
+    open1()
 
 
 if __name__ == '__main__':
