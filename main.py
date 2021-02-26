@@ -22,6 +22,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    
-hey hey why are u opening this on notepad not cool !! 
